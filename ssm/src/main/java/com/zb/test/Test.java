@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
     public static void main(String[] args) {
         //本地开发
+        //别人提交的
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-mybatis.xml");
         UserService bean = context.getBean(UserService.class);
         User admin = bean.findUserLogin("admin", "123");

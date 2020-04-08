@@ -8,14 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 
+//123456789awserfasdfasdfasdfasdfasdf
 @Controller
 public class UserController {
     @Autowired
     private UserService userService;
+
     @RequestMapping(value = "/login")
-    public String login(String name , String pwd, HttpSession session){
+    public String login(String name, String pwd, HttpSession session) {
         User userLogin = userService.findUserLogin(name, pwd);
-        session.setAttribute("sys_user",userLogin);
+        session.setAttribute("sys_user", userLogin);
         System.out.println(userLogin.getNickname());
         return "main";
     }

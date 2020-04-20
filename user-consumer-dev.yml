@@ -1,4 +1,4 @@
-token: abcde
+token: abcdef
 server:
   port: 10002
 spring:
